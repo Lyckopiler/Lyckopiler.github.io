@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LYCK0P1L3R</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<header class="header">
+    <a href="#default" class="logo">LYCK0P1L3R</a>
+    <div class="header-right">
+        <span onclick="openNav()">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </span>
+    </div>
+    </div>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">[X]</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="AboutMe.html" onclick="closeNav()">ABOUT ME</a>
+            <a href="Contacts.html" onclick="closeNav()">CONTACTS</a>
+        </div>
+    </div>
+
+    <script>
+        /* animating Meny button*/
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+</header>
+
+
+<body class="body">
+
+    <div class="content_homepage">
+        <video autoplay muted loop>
+            <source src="images/vidBG.mp4" type="video/mp4">
+        </video>
+        <div class="caption">
+            <div style="padding-top: 550px;  padding-bottom: 0px; padding-left: 40px; font-size: 50pt">
+                Here I am. Tryin' to make some nice stuff.
+            </div>
+            <div style="padding-top: 20px;  padding-bottom: 0px; padding-left: 40px; font-size: 25pt;">
+                Welcome to Lyckopiler portfolio website.
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer class="footer">
+    <p>
+        Lyckopiler, 2022. All rights reserved.
+    </p>
+</footer>
+
+</html>

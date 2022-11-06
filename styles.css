@@ -1,0 +1,350 @@
+/*The page itself________________________________________________________*/
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
+/* Style the header with a grey background and some padding */
+.header {
+
+    overflow: hidden;
+    background-color: #222435;
+    padding: 20px 10px;
+    padding-left: 30px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header .logo {
+    font-family: 'Silkscreen', cursive;
+    float: left;
+    color: rgb(111, 178, 255);
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 4px;
+    font-size: 35px;
+}
+
+.header .logo:hover {
+    background-color: rgb(31, 0, 80);
+    color: rgb(203, 147, 255);
+}
+
+/* Float the link section to the right */
+.header-right {
+    float: right;
+    padding-right: 42px;
+}
+
+.body {
+    margin: 0;
+    font-family: 'Chakra Petch', sans-serif;
+    color: whitesmoke;
+    background-color: #313541;
+}
+
+
+
+/* Style the content */
+.content {
+    background-color: #313541;
+    padding: 20px;
+    animation: fadeOut 1s;
+    /* Should be removed. Only for demonstration */
+}
+
+
+.content_homepage {
+    animation: fadeOut 1s;
+    height: 820px;
+    width: 1920px;
+    position: relative;
+}
+
+.content_homepage video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
+.content_homepage .caption {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.content_CNTCTS {
+    background-image: url(images/Contacts_BG.png);
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    animation: fadeOut 1s;
+    /* Should be removed. Only for demonstration */
+}
+
+
+
+.content_ABOUTME {
+    background-image: url(images/About_Me_BG.png);
+    background-attachment: fixed;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+    animation: fadeOut 1s;
+    /* Should be removed. Only for demonstration */
+}
+
+
+.img {
+    cursor: pointer;
+    transition: 0.8s;
+}
+
+.img:hover {
+    transform: scale(1.2);
+}
+
+/* Style the footer */
+.footer {
+    background-color: #222435;
+    color: rgb(111, 178, 255);
+    font-family: 'Silkscreen', cursive;
+    font-size: 7pt;
+    padding: 15px;
+}
+
+/*__________________________________________________________________________________*/
+
+/*THE ICON__________________________________________________________________________*/
+.container {
+    display: inline-block;
+    cursor: pointer;
+    padding: 5px 10px;
+    line-height: 25px;
+    border-radius: 4px;
+}
+
+.container:hover {
+    background-color: rgb(31, 0, 80);
+    color: rgb(203, 147, 255);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(111, 178, 255);
+    margin: 6px 0;
+    transition: 0.5s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: rotate(180deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    transform: rotate(180deg)
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: rotate(180deg);
+}
+
+/*_________________________________________________________________________________*/
+
+/*THE MENU__________________________________________________________________________*/
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 0;
+    width: 100%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    /*background-color: rgb(0, 0, 0);*/
+    /* Black fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/opacity */
+    overflow-y: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.7s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    transition-delay: 0.3s;
+    animation: fadeIn 1s;
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    z-index: 2;
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    transition: 0.7s;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    z-index: 2;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: rgb(203, 147, 255);
+    display: block;
+    /* Display block instead of inline */
+    transition: 0.3s;
+    /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+    z-index: 2;
+    color: rgb(111, 178, 255);
+    background: rgb(31, 0, 80);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: rgb(216, 0, 108);
+}
+
+.overlay .closebtn:hover {
+    color: rgb(203, 147, 255);
+    background: rgb(216, 0, 108);
+}
+
+input[type=text],
+select,
+textarea {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+input[type=submit] {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 20px;
+    background-color: rgb(111, 178, 255);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(203, 147, 255);
+}
+
+.form_container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.col-25 {
+    font-size: 20px;
+    padding-left: 40px;
+    float: left;
+    width: 15%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    font-size: 20px;
+    float: left;
+    width: 60%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+
+    .col-25,
+    .col-75,
+    input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .header-right {
+        float: none;
+    }
+
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

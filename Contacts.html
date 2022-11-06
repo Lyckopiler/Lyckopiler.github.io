@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LYCK0P1L3R</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<header class="header">
+    <a href="index.html" class="logo">LYCK0P1L3R</a>
+    <div class="header-right">
+        <span onclick="openNav()">
+            <div class="container" onclick="myFunction(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </span>
+    </div>
+    </div>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">[X]</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <a href="AboutMe.html">ABOUT ME</a>
+            <a href="#default">CONTACTS</a>
+        </div>
+    </div>
+
+    <script>
+        /* animating Meny button*/
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+        /* Open */
+        function openNav() {
+            document.getElementById("myNav").style.height = "100%";
+        }
+
+        /* Close */
+        function closeNav() {
+            document.getElementById("myNav").style.height = "0%";
+        }
+    </script>
+</header>
+
+
+<body class="body">
+    <div class="content_CNTCTS">
+        <p style="padding-top: 300px;  padding-bottom: 0px; padding-left: 40px; font-size: 100pt;">
+            Interested in what I'm doing? Let's keep in touch!</p>
+        <div style="font-family: 'Chakra Petch', sans-serif; font-size: 30pt;">
+            <table style="width: 95%; text-align: center;">
+                <tr>
+                    <td><a href="https://www.instagram.com/lyckopiler.motion"><img class="img" src="images/icons/instagram.webp"
+                                style="height: 180px; width: 180px"></a>
+                    </td>
+                    <td><a href="https://vk.com/lyck0piler"><img class="img" src="images/icons/vk_white.png"
+                                style="height: 180px; width: 180px"></a>
+                    </td>
+                    <td><a href="https://www.behance.net/lyckopiler"><img class="img" src="images/icons/Behance-Logo.png"
+                                style="height: 165px; width: 165px"></a>
+                    </td>
+                    <td><a href="https://dribbble.com/Lyckopiler"><img class="img" src="images/icons/dribbble.png"
+                                style="height: 165px; width: 165px"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://www.instagram.com/lyckopiler.motion" style="color: white; text-decoration: none">[INSTAGRAM]</a>
+                    </td>
+                    <td><a href="https://vk.com/lyck0piler" style="color: white; text-decoration: none">
+                            [VKONTAKTE]</a>
+                    </td>
+                    <td><a href="https://www.behance.net/lyckopiler" style="color: white; text-decoration: none">
+                            [BEHANCE]</a>
+                    </td>
+                    <td><a href="https://dribbble.com/Lyckopiler" style="color: white; text-decoration: none">
+                            [DRIBBBLE]</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h2 style="padding-top: 150px;  padding-bottom: 0px; padding-left: 40px; font-size: 50pt;">Got any questions left? Contact me!</h2>
+        <div class="form-container">
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Your name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="lname">Your E-mail</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="lname" name="lastname" placeholder="Your e-mail..">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-25">
+                        <label for="subject">Your question</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="subject" name="subject" placeholder="Write something.."
+                            style="height:200px"></textarea>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-25">
+                    </div>
+                    <div class="col-75">
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+<footer class="footer">
+    <p>
+        Lyckopiler, 2022. All rights reserved.
+    </p>
+</footer>
+
+</html>
